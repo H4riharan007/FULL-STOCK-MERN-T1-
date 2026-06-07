@@ -5,19 +5,21 @@ import Abouts from './Pages/Abouts'
 import Contacts from './Pages/Contacts'
 import Homes from './Pages/Homes'
 import Service from './Pages/Service'
+import {Routes,Route}from'react-router-dom'
 
 const App = () => {
   return (
     <>
-    <h1> Hello wolrd!!</h1>
-    <h1>Hello wolrd!!</h1>
     <Navbar/>
-    <Parent/>
-    <Homes/>
-    <Abouts/>
-    <Service/>
-    <Contacts/>
-    <Counter/>
+    <Routes>
+       <Route path='/' element={<Home/>}/>
+       <route path='/about' element={<About/>}></route>
+       <route path='/contact' element={<Contact/>}></route>
+       <route path='/service' element={<Service/>}></route>
+       <route path='/parent' element={<parent/>}></route>
+       <route path='/useState' element={<Counter/>}></route>
+       <route path='/useEffect' element={<Effect/>}></route>
+    </Routes>
     </>
   )
 }
